@@ -1,0 +1,890 @@
+es:
+  onboarding-dashboard:
+    menu:
+      # Text of navigation menu item
+      new-hires-tab: "Nuevas contrataciones"
+      # Text of navigation menu item, "Content" here is in context of informational resources
+      content-tab: "Contenido"
+      # Text of navigation menu item, "Activities" here is in context of informational resources
+      content-activities-tab: "Actividades"
+      # Text of navigation menu item, "Forms" here is in context of informational resources
+      content-forms-tab: "formularios"
+  
+    new-hires:
+      header: "Nuevas contrataciones"
+      # amount of selected hires
+      selected: "[NÚMERO] seleccionado"
+      filter:
+        status: Estado
+        office-location: Localización de la oficina
+        more: Más
+      # search field
+      search-by-name: Buscar por nombre de nuevo empleado
+      tooltips:
+        select: Seleccionar nueva contratación para acción masiva
+        select-all: Seleccionar todas las contrataciones para acción masiva
+      status:
+        in-progress: En progreso
+        stopped: Detenido
+        pending: Pendiente
+        completed: Terminado
+      headers:
+        # Column header over new hire name
+        name: Nueva contratación
+        # Column header over new hire's onboarding start date
+        start-date: Fecha de inicio
+        # Column header over new hire's job title
+        job-title: Título profesional
+        # Column header over new hire's manager
+        manager: Gerente
+        # Column header over new hire's onboarding progress
+        progress: Progreso
+  
+      #Information when there are no new hired candidates
+      empty-state: No hay nuevas contrataciones
+  
+      # action, Start onboarding for new hire
+      start-onboarding: comienzo
+      # action, Stop onboarding for new hire
+      stop-onboarding: Deténgase
+      # action, Delete new hire
+      delete: Borrar
+  
+      popup:
+        delete-success: "El perfil de incorporación de [NEW_HIRE_NAME] se eliminó correctamente"
+        delete-failure: "No se pudo eliminar el perfil de incorporación de [NEW_HIRE_NAME]. Por favor, inténtelo de nuevo más tarde"
+  
+      # action, Start onboarding for multiple new hires
+      start-mass-onboarding: Empezar a incorporar
+      # action, Stop onboarding for multiple new hires
+      stop-mass-onboarding: Detener incorporación
+  
+      # information about full loaded list, no more results
+      list-loaded: "Has llegado al final de tu lista, no hay más resultados para compartir"
+  
+      errors:
+        # Error message displayed when failed to load new hired candidates
+        load-new-hires-failed: No se pudieron cargar las nuevas contrataciones.
+        # CTA link label to retry load the data.
+        retry: Rever
+        popup:
+          # Load new hires popup error info
+          load-new-hires-failed: No se pudo cargar la lista de nuevas contrataciones. Inténtalo de nuevo.
+          # Popup error message displayed when new hires percentage progress was not loaded properly
+          load-new-hires-progress-failed: No se pudo cargar el progreso de las nuevas contrataciones. Inténtalo de nuevo.
+          # Popup error message displayed when basic filters were not loaded properly
+          load-basic-filters-failed: No se pudieron cargar los filtros básicos. Inténtalo de nuevo.
+          # Popup error message displayed when org field filters were not loaded properly
+          load-org-field-filters-failed: Error al cargar los filtros de campo de la organización. Inténtalo de nuevo.
+          # Popup error message displayed when there was some error with changing new hire state f.e from stopped to in_progress
+          change-onboarding-state: No se pudo cambiar el estado de incorporación. Inténtalo de nuevo.
+  
+      delete-dialog:
+        # Header for warning for deleting a new hire profile
+        title: "¿Borrar perfil?"
+        # Content text of deleting a new hire dialog
+        description: "¿Está seguro de que desea eliminar el perfil de: [NEW_HIRE_NAME]? Esta acción no se puede deshacer."
+  
+    slideout:
+      # Error message displayed when cannot fetch user profile data
+      error: "Se produjo un error al obtener los detalles del perfil del nuevo empleado."
+      # Label for start date of new hire's employment
+      start_date_label: 'Comienza el: [FECHA]'
+      menu:
+        # Text of dropdown option to download file
+        download-forms: Descargar formularios completos
+        # Text of dropdown option to edit new hire profile
+        edit-profile: Editar perfil
+        # Text of tooltip informing about sensitive data
+        sensitivity-tooltip: Todo el contenido es confidencial y solo puede ser descargado por usuarios con permisos.
+        # Text of tooltip informing that no forms are available to download
+        no-forms-to-download-tooltip: "Lo sentimos, no hay formularios disponibles para descargar en este momento."
+        # Text of button to delete new-hire profile
+        delete-profile: Borrar perfil
+      new-hire-data-edit-dialog:
+        # new hire data edit dialog title with user first & last name
+        title: "Editar perfil para:"
+        # cancel button label
+        cancel: Cancelar
+        # save button label
+        save: Ahorrar
+        # profile photo label
+        profile-photo: Foto de perfil
+        data:
+          # first name input label
+          first-name: Primer nombre
+          # last name input label
+          last-name: Apellido
+          # start date input label
+          start-date: Fecha de inicio
+          # new hire location input label
+          new-hire-location: Ubicación de nuevos empleados
+          # email input label
+          email: Correo electrónico
+          # phone input label
+          phone: Teléfono
+        popup:
+          # error popup displayed after update new hire data failed
+          error: Tuvimos problemas para guardar tus ediciones. Inténtalo de nuevo.
+          # success popup displayed when data update was successful
+          success: Perfil actualizado con éxito.
+  
+      sensitive-content-dialog:
+        # Sensitive content dialog title
+        title: Contenido sensible
+        # Sensitive content dialog description
+        description: "Solo tiene permiso para descargar contenido que no esté marcado como confidencial. Póngase en contacto con su administrador para descargar cualquier archivo marcado con un icono de candado:"
+        buttons:
+          cancel: 'Cancelar'
+          download-files: 'Descargar {FILES_COUNT, plural, =0{0 archivos} one{1 archivo} other{# archivos}}'
+  
+      forms:
+        # Title of the company forms section
+        title: "formularios"
+        # Text displayed in forms-box when user has no forms defined
+        empty: "El usuario no tiene formularios definidos"
+        menu:
+          # Text of dropdown option to download file
+          download-file: Descargar archivo
+          # Text of dropdown option to undo marking the form as complete
+          undo-mark-as-complete: Deshacer marcar como completo
+        undo-mark-as-complete-dialog:
+          # Title of the confirmation dialog whether to undo marking form as complete
+          title: Deshacer marcar como completo
+          # Content of the confirmation dialog whether to undo marking form as complete
+          content: "Esta acción requerirá que el nuevo empleado complete todo el formulario nuevamente. [LINE_BREAK][STRONG_BEGIN]¿Está seguro de que desea deshacer la marca como completada y volver a colocar la actividad en la lista de nuevos empleados?[STRONG_END]"
+  
+      activities:
+        # Title of the activities section
+        title: "Actividades"
+        # Text displayed in activity-box inform that user has no activity defined yet
+        empty: "El usuario no tiene actividades definidas"
+  
+        menu:
+          # Text of dropdown option to remove selected activity
+          remove: "Remover"
+          # Text of dropdown option to download files for selected activity
+          download: "Descargar archivo"
+          # Text of icon above download button with a description who can download this file
+          download-tooltip: "Solo los usuarios con acceso a datos confidenciales pueden ver o descargar este contenido."
+  
+        remove-dialog:
+          # Title of the confirmation dialog
+          title: Quitar actividad
+          # Content of the confirmation dialog
+          content: "¿Está seguro de que desea eliminar la actividad [STRONG_BEGIN][ACTIVITY][STRONG_END]? [LINE_BREAK]Esta acción no se puede deshacer."
+  
+        # Label displayed instead of activity due date when due date is today
+        today: "Este Dia"
+      activity-creator:
+        # Text of button that call action: create a new activity for user
+        create: "Agregar"
+        # Title of section to create new activity for new hire
+        title: "Agregar actividad para [NEW_HIRE_NAME]"
+        action:
+          # Text of button which trigger publish a new activity action
+          publish: "Publicar"
+        errors:
+          # Error message displayed when creating an activity failed
+          create: "Ocurrió un error al crear una actividad. Vuelva a intentarlo más tarde."
+          # Error message displayed when updating an activity failed
+          update: "Ocurrió un error al actualizar una actividad. Vuelva a intentarlo más tarde."
+      activity-details:
+        # Title of section containing activity assignee
+        assignee: "Cesionario"
+        # Label informing when the latest auto-save happened (e.g. Saved 1 min ago)
+        saved-label: "Guardado [TIME_AGO]"
+        # Label informing when that auto-saving of an activity is happening now
+        saving-label: "Ahorro..."
+        # Label informing that the activity has been completed
+        completed-label: "Terminado"
+        # Label informing about due date of the activity (e.g. Due May 2)
+        due-label: "Fecha de vencimiento]"
+        # Text on button going to the details of previous activity
+        previous-button: "Anterior"
+        # Text on button going to the details of next activity
+        next-button: "próximo"
+        # Tooltip displayed when hovering icon allowing to edit given section
+        edit-tooltip: "Editar"
+        title-description:
+          # Title of section containing title and description of an activity
+          title: "Descripción del Título"
+          # Placeholder in input where user enters activity title
+          title-placeholder: "¿Cómo le gustaría llamar a esta actividad?"
+          # Placeholder in the input where user enters activity description
+          description-placeholder: "Agregue una descripción para que el asignado sepa qué hacer..."
+          # Label next to checkbox where user marks whether to request uploading files by the hire
+          request-upload: "Solicitar una carga de nuevo empleado"
+          # Heading of the list of files uploaded by the user
+          files-uploaded: "Archivos subidos"
+          # Label next to checkbox marks whether this assisgnment contains sensitive data
+          has-sensitive-data: Contiene información sensible
+          # Tootip message for editing an assisgnment activity
+          sensitive-data-tooltip: La configuración sensible no se puede editar. Crea una nueva actividad para cambiar esta configuración.
+          # Label text for high priority checkbox
+          high-priority: Marcar como alta prioridad
+        dates:
+          # Title of section containing activity dates (send date and due date)
+          title: "fechas"
+          # Label followed by send date of an activity
+          send-date-label: "Enviar:"
+          # Label above input to choose activity send date
+          send-date-edit: "Fecha de envio"
+          # Placeholder inside input to choose activity send date
+          send-date-placeholder: "¿Cuándo se debe enviar esta actividad a los nuevos empleados?"
+          # Label followed by due date of an activity
+          due-date-label: "Adeudado:"
+          # Label above input to choose activity due date
+          due-date-edit: "Fecha de vencimiento"
+          # Label followed by date of completing the activity
+          completed-date-label: "Terminado:"
+          # Placeholder inside input to choose activity due date
+          due-date-placeholder: "¿Cuándo debe completar esta actividad el nuevo empleado?"
+  
+    content:
+      header: Descripción general del contenido
+      # Text of navigation menu item, "Activities" here is in context of informational resources
+      activities-tab-header: "Actividades"
+      # Text of navigation menu item, "Forms" here is in context of informational resources
+      forms-tab-header: "Formularios de nuevas contrataciones"
+      # text on button expanding list from default 3 items to all elements
+      view-all: 'Ver todo'
+      view-less: 'ver menos'
+      # Information when there are no content definitions (forms or activities) matching given search query
+      no-search-results: Su búsqueda no coincide con ningún resultado.
+      menu:
+        # Label for 'Edit' menu option - editing form or activity definition
+        edit: 'Editar'
+        # Label for 'Delete' menu option - deleting form or activity definition
+        delete: 'Borrar'
+  
+      nav-header:
+        # Text of button which navigates user back to content library
+        back: 'Volver a la biblioteca'
+        # Title of page with a form that creates new activity definition
+        create-activity: 'Crear nueva actividad'
+        # Title of a page with a form that edits activity definition
+        edit-activity: 'Editar actividad'
+        # Title of page with a form that creates new web form definition
+        create-company-form: Crear nuevo formulario
+        # Title of a page with a form that edits web form definition
+        edit-form: Editar formulario
+        # Title of page with a form that creates new PDF form definition
+        create-pdf-form: Crear nuevo formulario PDF
+        # Title of page with a form that edits PDF form definition
+        edit-pdf-form: Editar formulario PDF
+        # Title of page with options how to create new form - web form or fillable pdf form
+        add-company-form: Agregar nuevo formulario
+  
+      add-new:
+        # Text of button with cta to 'Add new' content
+        cta: 'Agregar nuevo contenido'
+        # Text of button with cta to 'Add new' content
+        cta-activities: 'Agregar nueva actividad'
+        # Text of button with cta to 'Add new' content
+        cta-forms: 'Agregar nuevo formulario'
+        # Header of add new modal asking for the type of content the user wants to create
+        header: "¿Qué tipo de contenido te gustaría agregar?"
+        activities:
+          # Title of "Activities" section inside "Add new" content modal
+          title: Actividades
+          # Description of "Activities" section inside "Add new" content modal
+          description: Cree tareas para que los nuevos empleados las completen durante la incorporación.
+        company-forms:
+          # Title of "Forms" section inside "Add new" content modal
+          title: Formularios
+          # Description of "Forms" section inside "Add new" content modal
+          description: Diseñe formularios web o cargue formularios PDF para que los completen los nuevos empleados.
+  
+      ACTIVITY:
+        # Header of the activities container
+        header: Actividades
+        # Description of the activities
+        description: Actividades que debe realizar el nuevo empleado durante el preembarque
+        # Label for Add activity button
+        add: Añadir actividad
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Eliminando tu actividad
+          # Content of the confirmation dialog
+          content: "¿Está seguro de que desea eliminar [STRONG_BEGIN][NOMBRE][STRONG_END]? [LINE_BREAK]Una vez eliminado, no podrás recuperarlo."
+        messages:
+          # Information when there are no activities to display
+          empty-state: No hay actividades disponibles.
+          # Notification displayed after successful deletion of activity definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] se ha eliminado correctamente.'
+        errors:
+          # Error message displayed when failed to load activities
+          loading: No se pudieron cargar las actividades.
+          # Error message displayed when failed to delete activity definition
+          delete: 'No se pudo eliminar la actividad. Por favor, inténtelo de nuevo más tarde.'
+  
+      WEB_FORM:
+        # Header of the web forms list container
+        header: Formularios web
+        # Description of the web forms list
+        description: Formularios y documentos específicos de nuestra organización
+        # Label for button to add a form
+        add: Agregar formulario web
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Borrando tu formulario
+          # Content of the confirmation dialog
+          content: "¿Está seguro de que desea eliminar [STRONG_BEGIN][NOMBRE][STRONG_END]? [LINE_BREAK]Una vez eliminado, no podrás recuperarlo."
+        messages:
+          # Information when there are no forms to display
+          empty-state: No hay formularios web disponibles.
+          # Notification displayed after successful deletion of form definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] se ha eliminado correctamente.'
+        errors:
+          # Error message displayed when failed to load forms
+          loading: No se pudieron cargar los formularios web.
+          # Error message displayed when failed to delete the web form definition
+          delete: 'No se pudo eliminar el formulario web. Por favor, inténtelo de nuevo más tarde.'
+  
+      FILLABLE_PDF_FORM:
+        # Header of the forms list container
+        header: Formularios PDF
+        # Description of the forms list
+        description: "Formularios listos para usar, como la recaudación de impuestos y otros formularios gubernamentales"
+        # Label for button to add a form
+        add: Agregar formulario PDF
+        delete-dialog:
+          # Title of the confirmation dialog
+          title: Borrando tu formulario
+          # Content of the confirmation dialog
+          content: "¿Está seguro de que desea eliminar [STRONG_BEGIN][NOMBRE][STRONG_END]? [LINE_BREAK]Una vez eliminado, no podrás recuperarlo."
+        messages:
+          # Information when there are no forms to display
+          empty-state: No hay formularios PDF disponibles.
+          # Notification displayed after successful deletion of form definition
+          delete-success: '[STRONG_BEGIN][NAME][STRONG_END] se ha eliminado correctamente.'
+        errors:
+          # Error message displayed when failed to load forms
+          loading: Error al cargar formularios PDF.
+          # Error message displayed when failed to delete the fillable pdf form definition
+          delete: 'No se pudo eliminar el formulario web. Por favor, inténtelo de nuevo más tarde.'
+  
+      create-activity:
+        # Headline of details section of new activity form
+        details: "Detalles de la actividad"
+        # Label for activity name input
+        name: "Título"
+        # Placeholder for activity name input
+        name-placeholder: "Elige un nombre para esta actividad"
+        # Label for activity description input
+        description: "Descripción"
+        # Placeholder for activity description input
+        description-placeholder: "Ingrese una breve descripción para que los miembros del equipo sepan cuándo usarla..."
+        # Headline for org field filters
+        filters: "Filtros de actividad"
+        # Description of filters
+        filters-description: "La actividad estará disponible para las nuevas contrataciones que cumplan con los siguientes criterios."
+        # Headline of setting section of new activity form
+        settings: "Ajustes"
+        # Label for "Save" button
+        save: "Ahorrar"
+        # Label for "Cancel" button
+        cancel: "Cancelar"
+        # Label for request upload checkbox
+        request-upload: "Solicitar carga de nuevo empleado"
+        # Message that activity has been successfully created
+        create-success: 'Se ha creado tu actividad [STRONG_BEGIN][ACTIVITY][STRONG_END].'
+        # Message that activity has been successfully created
+        update-success: 'Se actualizó tu actividad [STRONG_BEGIN][ACTIVITY][STRONG_END].'
+        errors:
+          # Error message displayed when failed to create activity definition
+          create: "Ocurrió un error al crear una definición de actividad. Vuelva a intentarlo más tarde."
+          # Error message displayed when form didn't pass validation process
+          validation: "No pudimos enviar su formulario. Por favor revise los mensajes debajo de los campos."
+  
+      upload-company-form:
+        # Instruction to upload pdf form
+        instruction: "Ok, comencemos cargando su formulario pdf..."
+        # Drag and drop area label
+        drag-drop: Arrastra y suelta un archivo
+        # Label for drag and drop area - Drag and drop a file or 'Upload'
+        or: o
+        # Upload button label
+        upload: Subir
+        # Duplicate fields list title
+        duplicate-fields: 'Campos duplicados'
+        # Upload pdf error modal
+        error-modal:
+          # Try again button label
+          try-again: Intentar otra vez
+        # Upload a file error message
+        errors:
+          NOT_A_PDF_FILE: "No pudimos cargar su archivo. Asegúrate de guardarlo como PDF e inténtalo de nuevo."
+          NOT_PARSABLE_FILE_PROVIDED: "No pudimos cargar su archivo porque está dañado. Crea uno nuevo e inténtalo de nuevo."
+          PDF_FILE_PARSING_ERROR: "No pudimos cargar su archivo porque está dañado. Crea uno nuevo e inténtalo de nuevo."
+          NOT_A_SINGLE_FILLABLE_PDF_FIELD_DEFINED: "Asegúrese de que su PDF tenga al menos un campo de formulario rellenable y vuelva a intentarlo."
+          SIGNATURE_FIELD_TYPE_NOT_SUPPORTED: 'Para habilitar una firma electrónica para su formulario, siga los siguientes pasos: [LINE_BREAK] 1. Edite su PDF con su editor de PDF preferido. [LINE_BREAK] 2. Quite el componente de firma de Adobe. [LINE_BREAK] 3. Agregue dos cuadros de texto como se aclara a continuación: [LINE_BREAK] - Firma: campo de cuadro de texto con ID &quot;smartonboard.signature&quot; [LINE_BREAK] - Fecha: campo de cuadro de texto con ID &quot;smartonboard.date&quot;'
+          NO_FILLABLE_FIELDS_DETECTED_IN_PDF: 'Asegúrese de haber asignado todos los campos rellenables a su PDF e intente cargarlo nuevamente.'
+          METADATA_FIELDS_DO_NOT_EXIST_IN_ANNOTATIONS: 'Formato de archivo pdf no válido, abra un ticket de soporte y adjunte el archivo. Nos gustaría ayudarlo a arreglar el archivo.'
+          MULTIPLE_SMART_SIGNATURES_IN_FILE: 'Revise su formulario para asegurarse de que solo tiene un campo de firma activo y vuelva a intentarlo.'
+          MULTIPLE_ADOBE_SIGNATURES_IN_FILE: 'Revise su formulario para asegurarse de que solo tiene un campo de firma activo y vuelva a intentarlo.'
+          MIX_OF_SMART_ONBOARD_AND_ADOBE_SIGNATURE_IN_FILE: 'Revise su formulario para asegurarse de que solo tiene un campo de firma activo y vuelva a intentarlo.'
+          DUPLICATED_FIELD_IDS_DETECTED: 'Los campos del formulario PDF deben tener nombres únicos. Cambie el nombre de todos los duplicados y súbalos de nuevo.'
+          popup:
+            NOT_A_PDF_FILE: "Huy! Algo salió mal. Asegúrese de que su formulario esté guardado como PDF y vuelva a intentarlo."
+            NOT_PARSABLE_FILE_PROVIDED: "Huy! Algo salió mal. Asegúrese de que su formulario esté guardado como un PDF válido y vuelva a intentarlo."
+            PDF_FILE_PARSING_ERROR: "Huy! Algo salió mal. Asegúrese de que su formulario esté guardado como un PDF válido y vuelva a intentarlo."
+            NOT_A_SINGLE_FILLABLE_PDF_FIELD_DEFINED: "No se detectaron campos rellenables. Cargue un PDF con al menos un campo de formulario rellenable."
+            SIGNATURE_FIELD_TYPE_NOT_SUPPORTED: "Detectamos un campo de firma de Adobe, este tipo de firma no es compatible. Siga las instrucciones que se proporcionan a continuación para habilitar la firma electrónica para su formulario PDF."
+            NO_FILLABLE_FIELDS_DETECTED_IN_PDF: "UH oh. No detectamos ningún campo rellenable en la carga de su formulario."
+            METADATA_FIELDS_DO_NOT_EXIST_IN_ANNOTATIONS: "UH oh. Detectamos un problema con su formulario PDF."
+            MULTIPLE_SMART_SIGNATURES_IN_FILE: "Demasiados campos de firma."
+            MULTIPLE_ADOBE_SIGNATURES_IN_FILE: "Demasiados campos de firma."
+            MIX_OF_SMART_ONBOARD_AND_ADOBE_SIGNATURE_IN_FILE: "Demasiados campos de firma."
+  
+      create-company-form:
+        # Question of how to create a new form
+        how-to-begin: "Bien, comencemos. ¿Cómo te gustaría empezar?"
+        # Option of how to create a new form
+        upload-pdf: Subir PDF
+        # Option of how to create a new form
+        create-web-form: Crear formulario web
+        # Headline of details section of new form
+        details: Detalles del formulario
+        # Label for form name input
+        name: Título
+        # Placeholder for form name input
+        name-placeholder: Elija un nombre para este formulario
+        # Label for form description input
+        description: Descripción
+        # Placeholder for form description input
+        description-placeholder: Ingrese una breve descripción para que los miembros del equipo sepan cuándo usarla...
+        # Label for form's uploaded pdf document input
+        uploaded-document: Documento cargado
+        # Headline for org field filters
+        filters: Filtros de formulario
+        # Description of filters
+        filters-description: El formulario estará disponible para las nuevas contrataciones que cumplan con los siguientes criterios.
+        # Headline of setting section of new form
+        settings: Ajustes
+        # Label for "Back" button
+        back: atrás
+        # Label for "Next" button
+        next: próximo
+        # Label for "Save" button
+        save: Ahorrar
+        # Label for "Cancel" button
+        cancel: Cancelar
+        # Message displayed when field already exists
+        field-exists: Este campo ya existe en el formulario
+        errors:
+          # Error message displayed when failed to create form definition
+          create: Ocurrió un error al crear una definición de formulario. Vuelva a intentarlo más tarde.
+          # Error message displayed when form didn't pass validation process
+          validation: No pudimos enviar su formulario. Por favor revise los mensajes debajo de los campos.
+          # Error message displayed when failed to fetch fillable PDF form definition
+          get-fillable-pdf-definition: Se produjo un error al obtener la información sobre el formulario PDF rellenable. Intente actualizar la página o póngase en contacto con el administrador del sistema.
+          # Error message displayed when failed to fetch fillable PDF file
+          download-pdf: Ocurrió un error al descargar la vista previa del formulario PDF. Intente actualizar la página o póngase en contacto con el administrador del sistema.
+          # Message displayed when no PDF file preview is available
+          preview-unavailable: "Lo sentimos, la vista previa del archivo PDF rellenable no está disponible."
+  
+      forms:
+        # Label for Form Builder
+        title: Creador de formularios
+        # Labels for Forms editor tabs
+        tabs:
+          # Label of Settings tab
+          settings: Ajustes
+          # Label of Builder tab
+          builder: Constructor
+          # Label of Builder tab
+          preview: Avance
+          # Label of tab for filtering forms list
+          all: TODOS
+          # Label of tab for filtering forms list
+          web-forms: FORMULARIOS WEB
+          # Label of tab for filtering forms list
+          pdf-forms: FORMULARIOS PDF
+  
+        topbar:
+          # Placeholder for form name (inside the input field)
+          namePlaceholder: "Por favor, introduzca un nombre de formulario"
+          # Label of Preview button
+          preview: Avance
+          # Label of Save button
+          save: Ahorrar
+          # Message that form has been successfully saved
+          save-success: 'Tu formulario [STRONG_BEGIN][FORM_NAME][STRONG_END] se guardó y ahora está disponible en tu biblioteca de formularios.'
+          # Label of Publish button
+          publish: Publicar
+          # Message that form has been successfully published
+          publish-success: 'Su formulario [STRONG_BEGIN][FORM_NAME][STRONG_END] se ha publicado y ahora está disponible en su biblioteca de formularios.'
+          # Error notification that form name has already been taken
+          update-failure-name: Este nombre de formulario ya está en uso.
+          # Error notification that user don't have permissions to update the form
+          update-failure-permissions: "No tienes permisos suficientes para actualizar el formulario. Por favor, póngase en contacto con el administrador del sistema."
+          # Error notification about internal server error
+          update-failure-general: "Ocurrió un error al guardar el formulario. Actualice la página en unos segundos y, si el problema vuelve a ocurrir, comuníquese con nuestro soporte."
+        success_dialog:
+          # Question in success publish/save dialog whether the form should be added to the email template
+          add_form_to_template: '¿Le gustaría agregarlo a una plantilla de correo electrónico?'
+          # Dialog button label, action: navigate to Form Library
+          back_to_library: volver a la biblioteca
+          # Dialog button label, action: navigate to Email Templates
+          go_to_templates: Sí ir a plantillas
+        # Case when the user tries to save form without any elements inside or when the user removes all content from form
+        discard-changes-dialog:
+          # Title of confirmation dialog whether to discard changes in form builder
+          title: Cambios no guardados
+          # Content of confirmation dialog whether to discard changes in form builder
+          content: "Si cierra este formulario, perderá los cambios no guardados. [LINE_BREAK][STRONG_BEGIN]¿Aún quieres cerrar el formulario?[STRONG_END]"
+        empty-changes-dialog:
+          # Title of confirmation dialog whether to discard changes in form builder
+          title: formulario vacio
+          # Content of confirmation dialog whether to discard changes in form builder
+          content: Agregue al menos un campo rellenable para continuar
+          # button for discard form and go back to content
+          discard: FORMULARIO DE DESCARTE
+          # button to revert last action and return to editing the form
+          back-to-edit: VOLVER A EDITAR
+        toolbox:
+          tabs:
+            # Available fields that can be added to the form
+            fields: campos de formulario
+            # Available design components that can added to the form
+            design: Diseño
+          fields:
+            header:
+              # Header for fields in category 'Candidate personal information'
+              PERSONAL_DATA: Datos personales del candidato
+              # Header for fields in category 'Other'
+              OTHER: Todos los demás campos
+              # Header for fields in "Basic fields" category
+              DOCUMENT: Campos básicos
+              # Header for fields in "Smart fields" category
+              NEW_HIRE: Campos inteligentes
+              # Header for fields in "Personal info" category
+              NEW_HIRE_PERSONAL_INFORMATION_FIELD: Información personal
+              # Header for fields in "Contact Info" category
+              NEW_HIRE_CONTACT_INFORMATION_FIELD: Datos de contacto
+              # Header for fields in "Financial Info" category
+              NEW_HIRE_FINANCIAL_INFORMATION_FIELD: Información financiera
+            search:
+              # Search field placeholder message
+              search_placeholder: Buscar campos de formulario existentes
+  
+          signature-fields:
+            # Header for fields in "Signature fields" category
+            header: Campos de firma
+            SIGNATURE:
+              title: Firma
+              hint: Arrastre esto para recopilar una firma electrónica
+            INITIALS:
+              title: Iniciales
+              hint: Arrastre para recoger las iniciales del firmante
+            DATE:
+              title: Fecha de firma
+              hint: Recopile un sello de fecha cuando se firme el formulario
+            signed-on: "Firmado:"
+            editor:
+              date: Incluya el sello de fecha &quot;Firmado el&quot;
+  
+          design:
+            # Label for free text box
+            FREE_TEXT: Texto libre
+            # Label for divider line box
+            DIVIDER_LINE: línea divisoria
+            # Label for image box
+            IMAGE: Imagen
+  
+          error:
+            # Error shown when fetching fields list failed
+            fields: 'No pudimos cargar la lista de campos. [LINE_BREAK]Actualiza la página en unos segundos y, si el problema vuelve a ocurrir, comunícate con nuestro servicio de asistencia.'
+        editor:
+          title:
+            # Label for edit field section
+            edit: Editar campo
+            # Label for create new field section
+            create: Crear nuevo campo
+          labels:
+            # Label for field name
+            name: Nombre de campo (interno)
+            # Label for field label (over the input field)
+            label: Título del campo
+            # Label for field placeholder (inside of the input field)
+            placeholder: Texto de sugerencia
+            # Label for field type
+            type: Tipo de campo
+            # Label for field required
+            required: Campo requerido
+            # Label for add option button
+            add-option: Añadir opción
+            # Label for add value button
+            add-value: Añadir valor
+            # Label for save button
+            save: Ahorrar
+            # Label for save and add another button
+            save-and-add: Guardar y agregar otro
+            # Label for retry button
+            retry: Rever
+            permission:
+              # Label for field access permission
+              question: "¿Qué usuarios pueden ver los datos de las respuestas?"
+              # Label for 'All' radio button
+              all: "¿Qué usuarios pueden ver los datos de las respuestas?"
+              # Label for 'Users with full access' radio button
+              full-access: Usuarios con acceso completo
+            visibility:
+              # Label for field visibility
+              question: "¿En qué parte del sistema aparece esto?"
+              # Label for 'Candidate profile' checkbox field
+              candidate-profile: Perfil del candidato
+              # Label for 'New Hire Form' checkbox field
+              new-hire-form: Formulario de nueva contratación
+              # Label for 'Offer Approval Form' checkbox field
+              offer-approval-form: Formulario de aprobación de oferta
+  
+          image:
+            # Edit button label
+            edit: Editar
+            # Text field for drag and drop an image
+            drag-and-drop: Arrastra y suelta una imagen
+            # Next line of text field for drag and drop
+            or: o
+            # Upload button label
+            upload: Subir
+  
+          errors:
+            # Error text for field name input
+            name: El nombre del campo es obligatorio
+            # Error text for field title input
+            title: El título del campo es obligatorio
+            # Error text for option input
+            option: "La opción no puede estar vacía, complete este campo"
+            # Error text for image upload
+            image-upload: "Ocurrió un error durante la carga de la imagen, vuelva a intentarlo"
+            # Error for uploading not an image file
+            not-image-file: No pudimos cargar su archivo. Asegúrate de que esté guardado en formato de imagen e inténtalo de nuevo.
+  
+        layout:
+          # Label inside 'Drag and drop fields' box
+          dropzone: Arrastrar y soltar campos
+          # Label inside 'Drag and drop fields or design components' box
+          dropzone-extended: 'Arrastra y suelta [LINK_BEGIN#BUILDER_FIELDS]campos[LINK_END] o [LINK_BEGIN#BUILDER_DESIGN]componentes de diseño[LINK_END]'
+          # Label for 'Yes' radio button
+          radio-yes: 'Sí'
+          # Label for 'Yes' radio button
+          radio-no: 'No'
+          # Alt for provided image
+          image-alt: Contenido proporcionado por el especialista en onboarding
+  
+        questionTypes:
+          # Type of form field
+          # Text field allow to provide text e.g Champ
+          TEXT: "Texto libre"
+          # Type of form field
+          # Date Picker field allow to choose date e.g. 2013-12-12
+          DATE: "Selector de fechas"
+          # Type of form field
+          # Numerical field allow to provide number e.g 4
+          NUMBER: "Numérico"
+          # Type of form field
+          # Percent field allow to provide number with percent indicator  e.g 20%
+          PERCENT: "Por ciento"
+          # Type of form field
+          # Currency field allow to provide number with currency indicator e.g 200 $
+          CURRENCY: "Divisa"
+          # Type of form field
+          # User Picker field allow to provide user name
+          USER: "Selector de usuarios"
+          # Type of form field
+          # Yes / No field allow to check Yes or No button
+          BOOLEAN: "Sí No"
+          # Type of form field
+          # Single select - dropdown for values
+          SELECT: "Selección única"
+          # Type of form field
+          # Multi select - dropdown for values
+          MULTI_SELECT: "Selección múltiple"
+          # Type of form field
+          # Region - dropdown for select region e.g Uthai Thani, TH
+          REGION: "Región"
+          # Type of form field
+          # Country - dropdown for select country e.g Holland, Italy
+          COUNTRY: "País"
+  
+        field-creator:
+          # title of new form field creator
+          title: Crear nuevo campo
+          visibility:
+            label: "¿Qué usuarios pueden ver los datos de las respuestas?"
+            all: Todos
+            full-access-only: Usuarios con acceso completo
+          contexts:
+            label: "¿En qué parte del sistema aparece esto?"
+            CANDIDATE_PROFILE: Perfil del candidato
+            OFFER_MANAGEMENT: Formulario de aprobación de oferta
+            NEW_HIRE_FORM: Formulario de nueva contratación
+  
+      definition:
+        dates:
+          header: Programa tu contenido
+          description: "De forma predeterminada, el contenido se envía en grupos y vence en la fecha de inicio. Seleccione a qué grupo le gustaría agregar este contenido."
+          pre-boarding: PRE-EMBARQUE
+          signed-group:
+            title: Enviado cuando se firma la oferta
+            legal: DOCUMENTOS LEGALES
+            general: PAPELES GENERALES
+          halfway-group:
+            title: Enviado a la mitad del preembarque
+            know-us: CONOCERNOS
+            day-one: PREPÁRESE PARA EL DÍA 1
+          custom-dates: Establecer fechas personalizadas
+          remove-custom-dates: Eliminar fechas personalizadas
+          error: Programe su contenido antes de continuar.
+          
+    shared:
+      due-date:
+        title:
+          # Header of input field, where user can select 'send date' of activity
+          send: "Fecha de envio"
+          # Header of input field, where user can select 'due-date' of activity
+          due: "Fecha de vencimiento"
+        description:
+          # Description text of input, where user can enter activity send date
+          send: "¿Cuándo desea que se envíe esta actividad al propietario?"
+          # Description text of input, where user can enter activity due date
+          due: "¿Cuándo le gustaría que el propietario complete esta actividad?"
+        # Label text
+        offer-date: "Fecha de la oferta"
+        # Label text
+        start-date: "Fecha de inicio"
+        # Placeholder text of input, where user can enter percentage number
+        placeholder: "% de tiempo de preembarque"
+      validation:
+        # Field was required, but user didn't provide value
+        required: "Proporcione un valor que no esté vacío para este campo."
+        # Send Date Field value was set after Due Date Field value
+        send-date-after-due-date: "Ajuste las fechas para que la fecha de envío sea anterior a la fecha de vencimiento."
+        # Provided value is too short, should be at least MIN_LENGTH characters long.
+        min-length: "El valor no puede tener menos de [MIN_LENGTH] caracteres."
+        # Provided value is too long, shouldn't be longer than MAX_LENGTH.
+        max-length: "El valor no puede tener más de [MAX_LENGTH] caracteres."
+        # Provided value with [COUNT] characters is too long, shouldn't be longer than MAX_LENGTH.
+        max-length-count: '[COUNT]/[MAX_LENGTH] caracteres. Ha superado el número máximo de caracteres.'
+        # Provided number should be greater than MIN
+        min: "El valor debe ser mayor que [MIN]."
+        # Provided number should be less than MAX
+        max: "El valor no puede ser mayor que [MAX]."
+        # Provided text includes forbidden symbols
+        symbols: "Elimine lo siguiente: [SÍMBOLOS]."
+        # Provided text includes invalid characters
+        invalid-text: "El valor no puede contener caracteres no válidos, solo se permiten letras."
+        # Provided email is invalid
+        invalid-email: "El valor debe ser una dirección de correo electrónico válida."
+      hints:
+        # Hint below description input that tells how many characters has been entered.
+        description-characters-count: '[COUNT]/[MAX_LENGTH] caracteres'
+  
+      buttons:
+        # Confirm button label
+        confirm: Confirmar
+        # Cancel button label
+        cancel: Cancelar
+        # Save button label
+        save: Ahorrar
+        # Next button label
+        next: próximo
+  
+      sensitive-data:
+        # Title for sensitive data
+        title: 'permisos'
+        # Description for sensitive data permissions
+        description: Establezca restricciones para garantizar que solo los usuarios con permisos puedan ver información confidencial
+        # Description text for the checkbox label on form definition
+        checkbox-label-form: El formulario contiene datos confidenciales
+        # Description text for the checkbox label on activity definition
+        checkbox-label-activity: El contenido adjunto a esta actividad puede contener datos confidenciales
+      high-priority-content:
+        # Title for sensitive data
+        title: 'Fijar prioridad'
+        # Description for sensitive data permissions
+        description: Puede marcar el contenido como de alta prioridad y nos aseguraremos de que se coloque en la parte superior del grupo de contenido.
+        # Description text for the checkbox label on form definition
+        checkbox-label-form: El formulario contiene datos confidenciales
+        # Description text for the checkbox label on activity definition
+        checkbox-label-activity: Marcar como alta prioridad
+  
+    smart-fields:
+      FIRST_NAME:
+        title: Nombre de pila
+        hint-text: Nombre de pila
+      MIDDLE_NAME:
+        title: Segundo nombre
+        hint-text: Segundo nombre
+      LAST_NAME:
+        title: Apellido
+        hint-text: Apellido
+      GENDER:
+        title: Género
+        hint-text: Género
+      DATE_OF_BIRTH:
+        title: Fecha de nacimiento
+        hint-text: Fecha de nacimiento
+      NATIONALITY:
+        title: Nacionalidad
+        hint-text: Nacionalidad
+      MARITAL_STATUS:
+        title: Estado civil
+        hint-text: Estado civil
+      NI_SSI_NUMBER:
+        title: Número NI SSI
+        hint-text: Número NI SSI
+      HOME_ADDRESS:
+        title: Direccion de casa
+        hint-text: Direccion de casa
+      CITY:
+        title: Ciudad
+        hint-text: Ciudad
+      POST_CODE:
+        title: código postal
+        hint-text: código postal
+      COUNTRY:
+        title: País
+        hint-text: País
+      TELEPHONE_NUMBER:
+        title: Número de teléfono
+        hint-text: Número de teléfono
+      EMAIL_ADDRESS:
+        title: Dirección de correo electrónico
+        hint-text: Dirección de correo electrónico
+      SORT_CODE:
+        title: Código de clasificacion
+        hint-text: Código de clasificacion
+      ACCOUNT_NUMBER:
+        title: Número de cuenta
+        hint-text: Número de cuenta
+      ROUTING_NUMBER:
+        title: número de ruta
+        hint-text: número de ruta
+      ACCOUNT_NAME:
+        title: Nombre de la cuenta
+        hint-text: Nombre de la cuenta
+      ACCOUNT_ADDRESS:
+        title: dirección de la cuenta
+        hint-text: dirección de la cuenta
+      IBAN:
+        title: IBAN
+        hint-text: IBAN
+      STATE:
+        title: ESTADO
+        hint-text: Estado
+      PREFERRED_NAME:
+        title: NOMBRE PREFERIDO
+        hint-text: Nombre Preferido
+  
+    pdf-answers-download:
+      # Message that user should wait for downloading files, will be combined with <link>
+      wait-message: Estamos preparando sus archivos para descargar. Para activar la descarga manualmente
+      # Link to be clicked
+      link: haga clic aquí
+      # Message about closing the window after successful download
+      close-window: "Después de una descarga exitosa, puede cerrar la ventana."
+ 
