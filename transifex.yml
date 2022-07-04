@@ -1,0 +1,7 @@
+git:
+  filters:
+    - filter_type: file
+      file_format: YML
+      source_language: en
+      source_file: config/source.en.yml
+      translation_files_expression: 'config/translations.<lang>.yml'
