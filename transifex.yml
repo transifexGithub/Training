@@ -1,7 +1,7 @@
 git:
   filters:
     - filter_type: file
-      file_format: YML
+      file_format: KEYVALUEJSON
       source_language: en
-      source_file: config/source.en.yml
-      translation_files_expression: 'config/translations.<lang>.yml'
+      source_file: config/eka-web_public-locale-en-json--master_en.json
+      translation_files_expression: 'config/eka-web_public-locale-en-json--master_<lang>.json'
