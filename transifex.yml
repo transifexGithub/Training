@@ -6,6 +6,7 @@ git:
     source_language: en
     source_file_dir: public/locales
     translation_files_expression: 'translations/<lang>'
+    
 settings:
   pr_branch_name: feat/transifex-update-<br_unique_id>
   language_mapping:
