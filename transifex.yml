@@ -5,4 +5,4 @@ git:
       source_file_extension: md
       source_language: es
       source_file_dir: '/source'
-      translation_files_expression: '<lang>/'
+      translation_files_expression: '/<lang>'
