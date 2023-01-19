@@ -1,0 +1,38 @@
+{
+   "singular_key":{
+      "string":"これは通常の文字列です。"
+   },
+   "total_files":{
+      "string":"{ file_count, plural, other {You have {file_count}files.} }",
+      "context":"追加のコンテキスト:....."
+   },
+   "special_chars":{
+      "string":"{ cnt, plural, other {These are Sam's books.} }",
+      "developer_comment":"これは特殊文字を含む複数形の文字列です"
+   },
+   "gold_coins":{
+      "string":"{ cnt, plural, other {You have {cnt} gold coins.} \n}",
+      "character_limit":150
+   },
+   "key_1":{
+      "key_nested_1a":{
+         "string":"ローカライズ"
+      },
+      "key_nested_1b":{
+         "key_nested_1ba":{
+            "string":"翻訳ツール"
+         },
+         "key_nested_1bb":{
+            "string":"{ minute_count, plural, other {{minute_count} minutes} }"
+         }
+      }
+   },
+   "parent_key":{
+      "child_key":{
+         "string":"これは子供からの鍵です",
+         "context":"名詞",
+         "developer_comment":"これはコメントです。",
+         "character_limit":150
+      }
+   }
+}
