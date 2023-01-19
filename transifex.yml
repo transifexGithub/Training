@@ -1,8 +1,7 @@
-git:
-  filters:
-  - filter_type: dir
-    file_format: GITHUBMARKDOWN
-    source_file_extension: md
-    source_language: en
-    source_file_dir: root/source
-    translation_files_expression: 'Translations/<lang>'
+git: 
+ filters: - filter_type: dir 
+ file_format: KEYVALUEJSON 
+ source_file_extension: json 
+ source_language: en 
+ source_file_dir: core/locales/en/ 
+ translation_files_expression: core/locales/<lang>
