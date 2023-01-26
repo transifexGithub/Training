@@ -5,6 +5,9 @@
    "plural_key12":{
       "string":"This is a duplicate regular string2."
    },
+    "plural_2":{
+      "string":"This is another duplicate regular string."
+   },
    "total_files12":{
       "string":"{ file_count, plural, one {You have {file_count} file.} other {You have {file_count}files.} }",
       "context":"Additional context:....."
