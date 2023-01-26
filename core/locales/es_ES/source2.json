@@ -6,7 +6,7 @@
       "string":"This is a duplicate regular string2."
    },
     "plural_2":{
-      "string":"This is another duplicate regular string."
+      "string":"Esta es otra cadena regular duplicada."
    },
    "total_files12":{
       "string":"{ file_count, plural, one {You have {file_count} file.} many {You have {file_count}files.} other {You have {file_count}files.} }",
