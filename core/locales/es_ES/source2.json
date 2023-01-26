@@ -3,7 +3,7 @@
       "string":"Esta es una cadena regular."
    },
    "plural_key12":{
-      "string":"This is a duplicate regular string."
+      "string":"This is a duplicate regular string2."
    },
    "total_files12":{
       "string":"{ file_count, plural, one {You have {file_count} file.} many {You have {file_count}files.} other {You have {file_count}files.} }",
